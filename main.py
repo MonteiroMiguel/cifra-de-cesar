@@ -1,6 +1,6 @@
 import streamlit as st
 
-from domain import criptografa, descriptografa
+from src.application.domain import criptografa, descriptografa
 
 st.title("Cifra de César")
 
