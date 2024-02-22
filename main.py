@@ -1,7 +1,10 @@
 import streamlit as st
 
 from src.application.domain import criptografa, descriptografa
-
+st.set_page_config(
+    page_title='Cifra de César',
+    page_icon='🗝️'
+)
 st.title("Cifra de César")
 
 st.session_state.frase = st.text_area(label='Mensagem')
