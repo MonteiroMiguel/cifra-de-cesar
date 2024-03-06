@@ -7,7 +7,7 @@ st.set_page_config(
 )
 st.title("Cifra de César")
 
-st.session_state.frase = st.text_area(label='Mensagem')
+st.session_state.mensagem = st.text_area(label='Mensagem')
 st.session_state.chave = st.number_input('Chave',min_value=1, max_value=25, step=1)
 
 col1, col2 = st.columns([.2,1])
