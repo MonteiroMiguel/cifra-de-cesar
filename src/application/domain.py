@@ -1,7 +1,5 @@
 import streamlit as st
 from unidecode import unidecode 
-
-
 alfabeto = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 
 def criptografa_alfabeto():
@@ -12,9 +10,7 @@ def criptografa():
     st.session_state.resultado = ''
     st.session_state.mensagem = unidecode(st.session_state.mensagem)
     for letra in st.session_state.mensagem:
-        if letra == ' ':
-            st.session_state.resultado += ' '
-        elif letra.lower() not in alfabeto:
+        if letra.lower() not in alfabeto:
             st.session_state.resultado += letra
         else:
             i = alfabeto.index(letra.lower())
@@ -25,8 +21,8 @@ def descriptografa():
     st.session_state.resultado = ''
     st.session_state.mensagem = unidecode(st.session_state.mensagem)
     for letra in st.session_state.mensagem:
-        if letra == ' ':
-            st.session_state.resultado += ' '
+        if letra.lower() not in alfabeto:
+            st.session_state.resultado += letra
        
         else:
             i = st.session_state.alfabeto_criptografado.index(letra.lower())
